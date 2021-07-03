@@ -1,42 +1,42 @@
-import { goToLogin, goToMusicsPage } from "../../routes/coordinator";
-import { TextField, Button } from "@material-ui/core";
+import { goToSignUp, goToMusicsPage } from "../../routes/coordinator";
 import { useHistory } from "react-router-dom";
 import useForm from "../../hooks/useForm";
 import { BASE_URL } from "../../constants/urls";
 import logo from "../../assets/logo.png";
+import { TextField, Button } from "@material-ui/core";
 import React from "react";
 import axios from "axios";
 import {
   Form,
   Title,
   Logo,
+  Input,
+  ButtonOutlined,
+  ButtonContained,
   ButtonsContainer,
 } from "./styled";
 
-const SignUpForm = () => {
+
+
+const LoginForm = () => {
   const history = useHistory();
 
   const [form, onChange, clear] = useForm({
-    name: "",
     email: "",
-    nickname: "",
     password: "",
   });
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    SignUp();
-    if (form.password.length < 6) {
-      return alert("A senha ter no minimo 6 caracteres");
-    }
+    Login();
   };
 
-  const SignUp = () => {
+  const Login = () => {
     axios
-      .post(`${BASE_URL}/user/signup`, form)
+      .post(`${BASE_URL}/user/login`, form)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
-        alert("Usuário cadastrado com sucesso!");
+        alert("Usuário logado com sucesso!");
         goToMusicsPage(history);
       })
       .catch((err) => {
@@ -47,24 +47,14 @@ const SignUpForm = () => {
   return (
     <Form onSubmit={onSubmitForm}>
       <Logo img src={logo} />
-      <Title>Inscreva-se</Title>
-      <TextField
-        name="name"
-        value={form.name}
-        onChange={onChange}
-        type="text"
-        label="Nome"
-        variant='outlined'
-        margin= "dense"
-        required
-      />
+      <Title>Login</Title>
       <TextField
         name="email"
         value={form.email}
         onChange={onChange}
         type="email"
         label="Email"
-        variant='outlined'
+        variant = "outlined"
         margin= "dense"
         required
       />
@@ -74,26 +64,18 @@ const SignUpForm = () => {
         onChange={onChange}
         type="password"
         label="Senha"
-        required
-        variant='outlined'
+        variant= 'outlined'
         margin= "dense"
-      />
-      <TextField
-        name="nickname"
-        value={form.nickname}
-        onChange={onChange}
-        type="text"
-        variant='outlined'
-        margin= "dense"
-        label="Nickname"
         required
       />
       <ButtonsContainer>
-        <Button variant="outlined" color="primary" onClick={() => goToLogin(history)}>Voltar</Button>
-        <Button variant="contained" color="primary" type="submit">Cadastrar</Button>
+        <Button variant="outlined" color="primary" onClick={() => goToSignUp(history)}>
+          Cadastrar
+        </Button>
+        <Button variant="contained" color="primary" type="submit">Logar</Button>
       </ButtonsContainer>
     </Form>
   );
 };
 
-export default SignUpForm;
+export default LoginForm;

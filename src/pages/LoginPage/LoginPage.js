@@ -1,10 +1,18 @@
-import React from 'react';
+import { useHistory } from "react-router-dom";
+import { MainContainer } from "./styled";
+import React from "react";
+import LoginForm from "./LoginForm";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
-const LoginPage = () => {
+const Login = () => {
+  useUnprotectedPage();
+
+  const history = useHistory();
+
   return (
-  
-      <h1>LoginPage</h1>
-
+    <MainContainer>
+      <LoginForm />
+    </MainContainer>
   );
 };
-export default LoginPage;
+export default Login;

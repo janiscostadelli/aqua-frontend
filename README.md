@@ -1,10 +1,7 @@
-# Getting Started with Create React App
+# Aqua - FrontEnd
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+## Descrição do Projeto:
+Projeto fullstack de um sistema de músicas
 
 ### `npm start`
 

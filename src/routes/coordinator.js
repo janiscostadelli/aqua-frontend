@@ -1,5 +1,5 @@
 export const goToLogin = (history) => {
-  history.push("/login")
+  history.push("/entrar")
 }
 
 export const goToSignUp = (history) => {
