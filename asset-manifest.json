@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/aqua-frontend/static/js/main.ec1a029f.chunk.js",
+    "main.js.map": "/aqua-frontend/static/js/main.ec1a029f.chunk.js.map",
+    "runtime-main.js": "/aqua-frontend/static/js/runtime-main.b76778c3.js",
+    "runtime-main.js.map": "/aqua-frontend/static/js/runtime-main.b76778c3.js.map",
+    "static/js/2.a251ca91.chunk.js": "/aqua-frontend/static/js/2.a251ca91.chunk.js",
+    "static/js/2.a251ca91.chunk.js.map": "/aqua-frontend/static/js/2.a251ca91.chunk.js.map",
+    "index.html": "/aqua-frontend/index.html",
+    "static/js/2.a251ca91.chunk.js.LICENSE.txt": "/aqua-frontend/static/js/2.a251ca91.chunk.js.LICENSE.txt",
+    "static/media/logo.a3e8e256.png": "/aqua-frontend/static/media/logo.a3e8e256.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b76778c3.js",
+    "static/js/2.a251ca91.chunk.js",
+    "static/js/main.ec1a029f.chunk.js"
+  ]
+}
