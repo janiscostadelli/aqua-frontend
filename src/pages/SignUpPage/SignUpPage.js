@@ -1,18 +1,14 @@
-import { useHistory } from "react-router-dom";
 import { MainContainer } from "./styled";
 import React from "react";
 import SignUpForm from "./SignUpForm";
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 const SignUpPage = () => {
-  useUnprotectedPage();
-  const history = useHistory();
+  useUnprotectedPage()
  
   return (
     <MainContainer>
-      <SignUpForm>
-      
-        </SignUpForm>
+      <SignUpForm />
     </MainContainer>
   );
 };

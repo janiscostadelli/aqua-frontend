@@ -22,7 +22,7 @@ const useRequestData = (initialData, url) => {
         }
         alert(error.response.data.error || 'Ocorreu um erro, tente novamente')
       })
-  }, [url])
+  }, [url, history])
 
   return (data)
 }

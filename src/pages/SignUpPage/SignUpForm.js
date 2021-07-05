@@ -14,14 +14,14 @@ import {
 } from "./styled";
 
 const SignUpForm = () => {
-  const history = useHistory();
+  const history = useHistory()
 
-  const [form, onChange, clear] = useForm({
+  const [form, onChange] = useForm({
     name: "",
     email: "",
     nickname: "",
     password: "",
-  });
+  })
 
   const onSubmitForm = (event) => {
     event.preventDefault();
@@ -29,19 +29,19 @@ const SignUpForm = () => {
     if (form.password.length < 6) {
       return alert("A senha ter no minimo 6 caracteres");
     }
-  };
+  }
 
   const SignUp = () => {
     axios
       .post(`${BASE_URL}/user/signup`, form)
       .then((res) => {
-        localStorage.setItem("token", res.data.token);
-        alert("Usuário cadastrado com sucesso!");
-        goToMusicsPage(history);
+        localStorage.setItem("token", res.data.token)
+        alert("Usuário cadastrado com sucesso!")
+        goToMusicsPage(history)
       })
       .catch((err) => {
-        alert(err.response.data.error);
-      });
+        alert(err.response.data.error)
+      })
   };
 
   return (

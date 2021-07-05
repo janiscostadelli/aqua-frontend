@@ -2,7 +2,7 @@ import React from "react";
 import useProtectedPage from "../../hooks/useProtectedPage";
 
 const MusicDetailsPage = () => {
-  useProtectedPage();
+  useProtectedPage()
   return (
   
       <h1>MusicDetailsPage</h1>

@@ -15,8 +15,8 @@ font-family: "Oswald";
 `
 
 export const MusicsContainer = styled.section`
-display: grid;
-gap: 50px;
-grid-template-columns: repeat(4,200px);
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
 margin-bottom: 50px;
 `

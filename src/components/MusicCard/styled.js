@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   height: 100px;
-  background-color: #edb595;
+  width: 350px;
+  margin: 30px;
+  background-color: #004352;
   color: #292929;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -23,6 +25,7 @@ export const Title = styled.h5`
   font-size: 20px;
   font-family: "Oswald";
   font-weight: 300;
+  color: white;
 `;
 
 export const SubTitle = styled.h6`
@@ -30,10 +33,5 @@ export const SubTitle = styled.h6`
   font-size: 16px;
   font-family: "Oswald";
   font-weight: 200;
-`;
-
-export const ModalContainer = styled.div`
-  width: 500px;
-  height: 500px;
-  background-color: white;
-`;
+  color: white;
+`

@@ -10,9 +10,6 @@ import {
   Form,
   Title,
   Logo,
-  Input,
-  ButtonOutlined,
-  ButtonContained,
   ButtonsContainer,
 } from "./styled";
 
@@ -21,14 +18,14 @@ import {
 const LoginForm = () => {
   const history = useHistory();
 
-  const [form, onChange, clear] = useForm({
+  const [form, onChange] = useForm({
     email: "",
     password: "",
   });
 
   const onSubmitForm = (event) => {
-    event.preventDefault();
-    Login();
+    event.preventDefault()
+    Login()
   };
 
   const Login = () => {

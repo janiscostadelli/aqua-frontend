@@ -11,23 +11,23 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/entrar">
+        <Route exact path="/aqua-frontend/entrar">
           <LoginPage />
         </Route>
 
-        <Route exact path="/cadastro">
+        <Route exact path="/aqua-frontend/cadastro">
           <SignUpPage />
         </Route>
 
-        <Route exact path="/">
+        <Route exact path="/aqua-frontend">
           <MusicsPage />
         </Route>
 
-        <Route exact path="/criar-musica">
+        <Route exact path="/aqua-frontend/criar-musica">
           <CreateMusicPage />
         </Route>
 
-        <Route exact path="/musicas/:id">
+        <Route exact path="/aqua-frontend/musicas/:id">
           <MusicDetailsPage />
         </Route>
 

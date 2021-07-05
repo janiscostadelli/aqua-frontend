@@ -5,15 +5,12 @@ import useRequestData from "../../hooks/useRequestData";
 import { BASE_URL } from "../../constants/urls";
 import { MainContainer, Title, MusicsContainer } from './styled.js'
 
-/*
-modal = música, como ano, gênero e álbum. 
-*/
 
 const MusicsPage = () => {
   useProtectedPage();
   const musics = useRequestData([], `${BASE_URL}/music/all`)
-  const musicCards = musics.map((music) => {
-    return <MusicCard title={music.title} author="autor"/>
+  const musicCards = musics.map((music, index) => {
+    return <MusicCard key={index} title={music.title} author="autor" date={music.date} file={music.file} genero="rock" album="abbey road"/>
   })
   
   return (
