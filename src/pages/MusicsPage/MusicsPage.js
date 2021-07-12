@@ -1,5 +1,6 @@
 import React from "react";
 import MusicCard from "../../components/MusicCard/MusicCard";
+import Header from "../../components/Header/Header";
 import useProtectedPage from "../../hooks/useProtectedPage";
 import useRequestData from "../../hooks/useRequestData";
 import { BASE_URL } from "../../constants/urls";
@@ -15,6 +16,7 @@ const MusicsPage = () => {
   
   return (
     <MainContainer>
+      <Header />
       <Title>Musicas</Title>
       <MusicsContainer>
        {musicCards}

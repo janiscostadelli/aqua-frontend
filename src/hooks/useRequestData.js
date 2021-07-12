@@ -20,7 +20,6 @@ const useRequestData = (initialData, url) => {
           localStorage.removeItem('token');
           goToLogin(history);
         }
-        alert(error.response.data.error || 'Ocorreu um erro, tente novamente')
       })
   }, [url, history])
 

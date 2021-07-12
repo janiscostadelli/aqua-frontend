@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { TextField } from "@material-ui/core";
 
 export const MainContainer = styled.div`
-  background-color: #067e98;
+  background-color: #C5CAE9;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -11,24 +12,16 @@ export const MainContainer = styled.div`
 export const Form = styled.form`
   height: 500px;
   width: 550px;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 25px;
-  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4);
-`;
-
-export const Title = styled.h1`
-  margin: 0px;
-  font-size: 48px;
-  color: #424242;
-  font-family: "Oswald";
+  gap: 5px;
 `;
 
 export const Logo = styled.img`
   width: 100px;
   margin-top: 50px;
+  margin: 30px;
 `;
 
 export const ButtonsContainer = styled.div`
@@ -38,4 +31,10 @@ export const ButtonsContainer = styled.div`
   font-family: "Oswald";
   padding: 10px 0px;
   gap: 20px;
+  margin: 15px;
 `;
+
+export const StyledTextField = styled(TextField)`
+  background-color: white;
+  border-radius: 5px;
+`

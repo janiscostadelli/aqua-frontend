@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   height: 100px;
-  width: 350px;
-  margin: 30px;
-  background-color: #004352;
+  width: 70vw;
+  margin: 10px;
+  background-color: #5C6BC0;
   color: #292929;
   border-radius: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -16,7 +15,8 @@ export const MainContainer = styled.div`
   transition: 500ms;
   :hover {
     cursor: pointer;
-    box-shadow: none;
+    height: 120px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   }
 `;
 
