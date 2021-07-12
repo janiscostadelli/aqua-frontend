@@ -1,14 +1,15 @@
 import React from "react";
-import {MainContainer} from "./styled";
+import { MainContainer } from "./styled";
+import Header from "../../components/Header/Header";
 import CreateMusicForm from "./CreateMusicForm";
 import useProtectedPage from "../../hooks/useProtectedPage";
 
-
 const CreateMusicPage = () => {
-  useProtectedPage()
- 
+  useProtectedPage();
+
   return (
     <MainContainer>
+      <Header />
       <CreateMusicForm />
     </MainContainer>
   );
