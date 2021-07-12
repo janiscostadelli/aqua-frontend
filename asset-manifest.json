@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.js": "/aqua-frontend/static/js/main.8ec1b395.chunk.js",
-    "main.js.map": "/aqua-frontend/static/js/main.8ec1b395.chunk.js.map",
+    "main.js": "/aqua-frontend/static/js/main.6b32c639.chunk.js",
+    "main.js.map": "/aqua-frontend/static/js/main.6b32c639.chunk.js.map",
     "runtime-main.js": "/aqua-frontend/static/js/runtime-main.b76778c3.js",
     "runtime-main.js.map": "/aqua-frontend/static/js/runtime-main.b76778c3.js.map",
-    "static/js/2.01ca1847.chunk.js": "/aqua-frontend/static/js/2.01ca1847.chunk.js",
-    "static/js/2.01ca1847.chunk.js.map": "/aqua-frontend/static/js/2.01ca1847.chunk.js.map",
+    "static/js/2.d7aaef96.chunk.js": "/aqua-frontend/static/js/2.d7aaef96.chunk.js",
+    "static/js/2.d7aaef96.chunk.js.map": "/aqua-frontend/static/js/2.d7aaef96.chunk.js.map",
     "index.html": "/aqua-frontend/index.html",
-    "static/js/2.01ca1847.chunk.js.LICENSE.txt": "/aqua-frontend/static/js/2.01ca1847.chunk.js.LICENSE.txt",
-    "static/media/error.ce202190.png": "/aqua-frontend/static/media/error.ce202190.png",
-    "static/media/logo.a3e8e256.png": "/aqua-frontend/static/media/logo.a3e8e256.png"
+    "static/js/2.d7aaef96.chunk.js.LICENSE.txt": "/aqua-frontend/static/js/2.d7aaef96.chunk.js.LICENSE.txt",
+    "static/media/error.ce202190.png": "/aqua-frontend/static/media/error.ce202190.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b76778c3.js",
-    "static/js/2.01ca1847.chunk.js",
-    "static/js/main.8ec1b395.chunk.js"
+    "static/js/2.d7aaef96.chunk.js",
+    "static/js/main.6b32c639.chunk.js"
   ]
 }
