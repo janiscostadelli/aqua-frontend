@@ -1,7 +1,7 @@
 import { goToSignUp } from "../../routes/coordinator";
 import { useHistory } from "react-router-dom";
 import useForm from "../../hooks/useForm";
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/logo.png";
 import { TextField, Button } from "@material-ui/core";
 import React from "react";
 import { Form, Title, Logo, ButtonsContainer, StyledTextField } from "./styled";
