@@ -3,7 +3,7 @@ import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import useForm from "../../hooks/useForm";
 import { BASE_URL } from "../../constants/urls";
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/logo.png";
 import React from "react";
 import axios from "axios";
 import { Form, Logo, ButtonsContainer, StyledTextField } from "./styled";
