@@ -1,21 +1,17 @@
 export const goToLogin = (history) => {
-  history.push("/aqua-frontend/entrar")
+  history.push("/entrar")
 }
 
 export const goToSignUp = (history) => {
-  history.push("/aqua-frontend/cadastro")
+  history.push("/cadastro")
 }
 
-export const goToMusicsPage = (history) => {
-  history.push("/aqua-frontend")
+export const goToHomePage = (history) => {
+  history.push("/")
 }
 
 export const goToCreateMusicPage = (history) => {
-  history.push("/aqua-frontend/criar-musica")
-}
-
-export const goToMusicDetailsPage = (history, id) => {
-  history.push(`/aqua-frontend/musicas/${id}`)
+  history.push("/criar-musica")
 }
 
 export const goToLastPage = (history) => {

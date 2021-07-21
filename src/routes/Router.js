@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import CreateMusicPage from "../pages/CreateMusicPage/CreateMusicPage";
-import MusicDetailsPage from "../pages/MusicDetailsPage/MusicDetailsPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
-import MusicsPage from "../pages/MusicsPage/MusicsPage";
+import HomePage from "../pages/HomePage/HomePage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
@@ -11,24 +10,20 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/aqua-frontend/entrar">
+        <Route exact path="/entrar">
           <LoginPage />
         </Route>
 
-        <Route exact path="/aqua-frontend/cadastro">
+        <Route exact path="/cadastro">
           <SignUpPage />
         </Route>
 
-        <Route exact path="/aqua-frontend">
-          <MusicsPage />
+        <Route exact path="/">
+          <HomePage />
         </Route>
 
-        <Route exact path="/aqua-frontend/criar-musica">
+        <Route exact path="/criar-musica">
           <CreateMusicPage />
-        </Route>
-
-        <Route exact path="/aqua-frontend/musicas/:id">
-          <MusicDetailsPage />
         </Route>
 
         <Route>

@@ -1,31 +1,39 @@
 import styled from "styled-components";
 import { TextField } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+import { backgroundColor } from "../../constants/colors";
 
 export const MainContainer = styled.div`
-  background-color: #C5CAE9;
+  background-color: ${backgroundColor};
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 `;
 
 export const Form = styled.form`
-  height: 500px;
-  width: 550px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 5px;
+  margin-top: -70px;
 `;
 
-export const Logo = styled.img`
-  width: 100px;
-  margin-top: 50px;
-  margin: 30px;
+export const Title = styled.h1`
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Oswald";
+`;
+
+export const StyledTextField = styled(TextField)`
+  background-color: white;
+  border-radius: 5px;
+  width: 300px;
 `;
 
 export const ButtonsContainer = styled.div`
-  width: 220px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
   font-family: "Oswald";
@@ -34,7 +42,10 @@ export const ButtonsContainer = styled.div`
   margin: 15px;
 `;
 
-export const StyledTextField = styled(TextField)`
+export const StyledSignupButton = styled(Button)`
   background-color: white;
-  border-radius: 5px;
-`
+  width: 50%;
+`;
+export const StyledLoginButton = styled(Button)`
+  width: 50%;
+`;

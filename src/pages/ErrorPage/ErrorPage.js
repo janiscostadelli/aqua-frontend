@@ -1,35 +1,36 @@
-import { goToMusicsPage } from "../../routes/coordinator";
+import { goToHomePage } from "../../routes/coordinator";
 import { useHistory } from "react-router-dom";
-import { Button } from "@material-ui/core";
 import error from "../../assets/error.png";
 import React from "react";
+import Header from "../../components/Header/Header";
 import {
   ErrorImage,
   TextContainer,
   MainContainer,
-  StyledText,
+  Title,
   SubContainer,
+  StyledLoginButton,
 } from "./styled";
 
 const ErrorPage = () => {
   const history = useHistory();
   return (
     <MainContainer>
+      <Header />
       <SubContainer>
         <ErrorImage img src={error} />
         <TextContainer>
-          <StyledText>Erro 404</StyledText>
-          <StyledText>Ops, parece que essa página não existe!</StyledText>
+          <Title>Ops, parece que essa página não existe!</Title>
         </TextContainer>
-      </SubContainer>
 
-      <Button
-        variant="contained"
-        color="neutral"
-        onClick={() => goToMusicsPage(history)}
-      >
-        Voltar para a página inicial
-      </Button>
+        <StyledLoginButton
+          variant="outlined"
+          color="primary"
+          onClick={() => goToHomePage(history)}
+        >
+          Voltar para a página inicial
+        </StyledLoginButton>
+      </SubContainer>
     </MainContainer>
   );
 };

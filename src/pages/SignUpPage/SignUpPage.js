@@ -1,6 +1,7 @@
 import { MainContainer } from "./styled";
 import React from "react";
 import SignUpForm from "./SignUpForm";
+import Header from "../../components/Header/Header";
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 const SignUpPage = () => {
@@ -8,6 +9,7 @@ const SignUpPage = () => {
  
   return (
     <MainContainer>
+      <Header />
       <SignUpForm />
     </MainContainer>
   );

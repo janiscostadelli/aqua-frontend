@@ -1,21 +1,35 @@
 import React from "react";
-import { MainContainer, StyledButton, Logo } from "./styled";
+import {
+  MainContainer,
+  StyledButton,
+  Logo,
+  Title,
+  LogoContainer,
+} from "./styled";
 import { useHistory } from "react-router-dom";
-import { logout } from '../../services/user';
+import { logout } from "../../services/user";
 import logo from "../../assets/Logo.png";
 
-const Header = () => {
+const Header = (props) => {
   const history = useHistory();
   return (
     <MainContainer>
-      <Logo src={logo}/>
-      <StyledButton
-        variant="outlined"
-        color="primary"
-        onClick={() => logout(history)}
-      >
-        Sair
-      </StyledButton>
+      <LogoContainer>
+        <Logo src={logo} />
+        <Title>Aqua</Title>
+      </LogoContainer>
+      {props.logged ? (
+        <StyledButton
+          variant="outlined"
+          color="primary"
+          size="small"
+          onClick={() => logout(history)}
+        >
+          Sair
+        </StyledButton>
+      ) : (
+        <div />
+      )}
     </MainContainer>
   );
 };

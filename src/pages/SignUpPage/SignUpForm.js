@@ -1,12 +1,9 @@
-import { goToLogin, goToMusicsPage } from "../../routes/coordinator";
-import { Button } from "@material-ui/core";
+import { goToLogin } from "../../routes/coordinator";
 import { useHistory } from "react-router-dom";
 import useForm from "../../hooks/useForm";
-import { BASE_URL } from "../../constants/urls";
-import logo from "../../assets/Logo.png";
 import React from "react";
-import axios from "axios";
-import { Form, Logo, ButtonsContainer, StyledTextField } from "./styled";
+import { Form, ButtonsContainer, StyledTextField, Title, StyledBackButton, StyledSignupButton } from "./styled";
+import { signUp } from "../../services/user";
 
 const SignUpForm = () => {
   const history = useHistory();
@@ -19,34 +16,19 @@ const SignUpForm = () => {
   });
 
   const onSubmitForm = (event) => {
-    event.preventDefault();
-    SignUp();
-    if (form.password.length < 6) {
-      return alert("A senha ter no minimo 6 caracteres");
+      event.preventDefault();
+      signUp(form, history);
     }
-  };
-
-  const SignUp = () => {
-    axios
-      .post(`${BASE_URL}/user/signup`, form)
-      .then((res) => {
-        localStorage.setItem("token", res.data.token);
-        goToMusicsPage(history);
-      })
-      .catch((err) => {
-        alert(err.response.data.error);
-      });
-  };
 
   return (
     <Form onSubmit={onSubmitForm}>
-      <Logo img src={logo} />
+      <Title>Cadastro</Title>
       <StyledTextField
         name="name"
         value={form.name}
         onChange={onChange}
         type="text"
-        label="Nome"
+        placeholder="Nome"
         variant="outlined"
         margin="dense"
         required
@@ -56,7 +38,7 @@ const SignUpForm = () => {
         value={form.email}
         onChange={onChange}
         type="email"
-        label="Email"
+        placeholder="Email"
         variant="outlined"
         margin="dense"
         required
@@ -66,7 +48,7 @@ const SignUpForm = () => {
         value={form.password}
         onChange={onChange}
         type="password"
-        label="Senha"
+        placeholder="Senha"
         required
         variant="outlined"
         margin="dense"
@@ -78,20 +60,20 @@ const SignUpForm = () => {
         type="text"
         variant="outlined"
         margin="dense"
-        label="Nickname"
+        placeholder="Nickname"
         required
       />
       <ButtonsContainer>
-        <Button
+        <StyledBackButton
           variant="outlined"
           color="primary"
           onClick={() => goToLogin(history)}
         >
           Voltar
-        </Button>
-        <Button variant="contained" color="primary" type="submit">
+        </StyledBackButton>
+        <StyledSignupButton variant="contained" color="primary" type="submit">
           Cadastrar
-        </Button>
+        </StyledSignupButton>
       </ButtonsContainer>
     </Form>
   );

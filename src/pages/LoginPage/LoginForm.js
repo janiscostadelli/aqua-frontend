@@ -1,10 +1,15 @@
 import { goToSignUp } from "../../routes/coordinator";
 import { useHistory } from "react-router-dom";
 import useForm from "../../hooks/useForm";
-import logo from "../../assets/Logo.png";
-import { TextField, Button } from "@material-ui/core";
 import React from "react";
-import { Form, Title, Logo, ButtonsContainer, StyledTextField } from "./styled";
+import {
+  Form,
+  ButtonsContainer,
+  StyledTextField,
+  Title,
+  StyledSignupButton,
+  StyledLoginButton,
+} from "./styled";
 import { login } from "../../services/user";
 
 const LoginForm = () => {
@@ -22,13 +27,13 @@ const LoginForm = () => {
 
   return (
     <Form onSubmit={onSubmitForm}>
-      <Logo img src={logo} />
+      <Title>Login</Title>
       <StyledTextField
         name="email"
         value={form.email}
         onChange={onChange}
         type="email"
-        label="Email"
+        placeholder="Email"
         variant="outlined"
         margin="dense"
         required
@@ -38,22 +43,22 @@ const LoginForm = () => {
         value={form.password}
         onChange={onChange}
         type="password"
-        label="Senha"
+        placeholder="Senha"
         variant="outlined"
         margin="dense"
         required
       />
       <ButtonsContainer>
-        <Button
+        <StyledSignupButton
           variant="outlined"
           color="primary"
           onClick={() => goToSignUp(history)}
         >
           Cadastrar
-        </Button>
-        <Button variant="contained" color="primary" type="submit">
+        </StyledSignupButton>
+        <StyledLoginButton variant="contained" color="primary" type="submit">
           Logar
-        </Button>
+        </StyledLoginButton>
       </ButtonsContainer>
     </Form>
   );
