@@ -8,7 +8,7 @@ import {
 } from "./styled";
 import { useHistory } from "react-router-dom";
 import { logout } from "../../services/user";
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/logo.png";
 
 const Header = (props) => {
   const history = useHistory();
