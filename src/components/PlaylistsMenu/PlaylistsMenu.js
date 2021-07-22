@@ -26,7 +26,9 @@ const PlaylistsMenu = (props) => {
   };
 
   useEffect(async () => {
-    setPlaylists(await getAllPlaylists());
+    const result = await getAllPlaylists();
+    setPlaylists(result);
+    props.setPlaylist({id: result[0].id, name: result[0].name})
   }, []);
 
   return (

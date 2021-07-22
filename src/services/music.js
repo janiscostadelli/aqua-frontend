@@ -3,7 +3,7 @@ import { BASE_URL } from "../constants/urls";
 
 export const createMusic = (body) => {
   axios
-    .post(`${BASE_URL}/music/createMusic`, body, {
+    .post(`${BASE_URL}/music/create`, body, {
       headers: { Authorization: localStorage.getItem("token") },
     })
     .then((res) => {
@@ -17,7 +17,7 @@ export const createMusic = (body) => {
 
 export const searchMusic = async (body) => {
   const result = await axios
-    .post(`${BASE_URL}/music/searchMusic`, body)
+    .post(`${BASE_URL}/music/search`, body)
     .then((res) => {
       return res.data;
     })

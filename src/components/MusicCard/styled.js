@@ -1,28 +1,29 @@
 import styled from "styled-components";
+import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+//import FavoriteIcon from '@material-ui/icons/Favorite';
 
 export const MainContainer = styled.div`
-  height: 100px;
+  height: 40px;
   width: 70vw;
-  margin: 10px;
-  background-color: #5C6BC0;
+  margin: 3px;
+  padding: 10px;
+  background-color: #5c6bc0;
   color: #292929;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  transition: 500ms;
-  :hover {
-    cursor: pointer;
-    height: 120px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  }
+`;
+
+export const MusicContainer = styled.div`
+  padding: 10px;
 `;
 
 export const Title = styled.h5`
   margin: 0px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Oswald";
   font-weight: 300;
   color: white;
@@ -34,4 +35,27 @@ export const SubTitle = styled.h6`
   font-family: "Oswald";
   font-weight: 200;
   color: white;
-`
+`;
+
+export const IconsContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+`;
+export const StyledPlayIcon = styled(PlayCircleFilledIcon)`
+  color: #ffffff;
+  font-size: 30px;
+`;
+
+export const StyledFavoriteBorderIcon = styled(FavoriteBorderIcon)`
+  color: #ffffff;
+  font-size: 20px;
+`;
+
+/* export const StyledFavoriteIcon = styled(StyledFavoriteIcon)` */
+/* color: #FFFFFF; */
+/* font-size: 20px; */
+/* ` */
+/*  */
+/*  */
