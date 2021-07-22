@@ -1,11 +1,34 @@
-# Aqua - FrontEnd
+#  🎧 Aqua
+http://aqua-api-doc.surge.sh/
 
-### Como visualizar:
-Entre nesse [link](https://janiscostadelli.github.io/aqua-frontend)
+Projeto Full Stack de um site de musicas.
 
-### Funcionalidades:
-- Cadastro
+
+#### 📄 Scripts
+```
+npm start
+```
+```
+npm run build
+```
+
+#### ✔️ Features
 - Login
-- Criação de músicas
-- Modal com música selecionada
+- Logout
+- Cadastro
+- Criar playlist
+- Procurar música
 
+#### 📦 API
+
+Clique [aqui](http://aqua-api-doc.surge.sh/) para acessar.
+
+
+### 🛠️ Construído com
+
+* [ReactJS](https://pt-br.reactjs.org/)
+* [Material-UI](https://material-ui.com/pt/)
+* [Axios](https://axios-http.com/docs/intro)
+* [styled-components](https://styled-components.com/)
+
+---
