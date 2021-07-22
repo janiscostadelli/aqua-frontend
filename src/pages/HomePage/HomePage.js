@@ -28,8 +28,12 @@ const HomePage = () => {
   const [inputText, setInputText] = useState("");
 
   useEffect(async () => {
-    setMusics(await searchMusic({ playlistId: playlist.id, inputText: "" }));
+    setMusics(await searchMusic({ playlistId: playlist.id, inputText: inputText }));
   }, [playlist]);
+
+  const search = async () => {
+    setMusics(await searchMusic({ playlistId: playlist.id, inputText: inputText }));
+  }
 
   const renderMusics = musics.map((music) => {
     return <MusicCard key={music.id} music={music} />;
@@ -51,7 +55,7 @@ const HomePage = () => {
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
-                    <IconButton>
+                    <IconButton onClick={search}>
                       <StyledSearch />
                     </IconButton>
                   </InputAdornment>
