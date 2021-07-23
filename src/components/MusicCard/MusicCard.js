@@ -4,9 +4,11 @@ import {
   MusicContainer,
   Title,
   SubTitle,
+  Notice,
   IconsContainer,
   StyledPlayIcon,
   StyledFavoriteBorderIcon,
+  TextContainer,
 } from "./styled.js";
 import PopPop from "react-poppop";
 import { IconButton } from "@material-ui/core";
@@ -22,10 +24,12 @@ const MusicCard = (props) => {
   return (
     <>
       <MainContainer>
-        <Title>Publicado por: {props.music.user_nickname}</Title>
-        <SubTitle>
-          {props.music.name} - {props.music.artist}
-        </SubTitle>
+        <TextContainer>
+          <Title>Publicado por: {props.music.user_nickname}</Title>
+          <SubTitle>
+            {props.music.name} - {props.music.artist}
+          </SubTitle>
+        </TextContainer>
         <IconsContainer>
           <IconButton>
             <StyledFavoriteBorderIcon />
@@ -70,6 +74,10 @@ const MusicCard = (props) => {
           <p>
             <b>Publicado por:</b> {props.music.user_nickname}
           </p>
+          <Notice>
+            Verifique se você está logado no Spotify do navegador para ouvir a
+            música
+          </Notice>
         </MusicContainer>
       </PopPop>
     </>

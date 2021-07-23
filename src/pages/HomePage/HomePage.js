@@ -19,7 +19,7 @@ import {
 import PlaylistsMenu from "../../components/PlaylistsMenu/PlaylistsMenu";
 import { createMusic, searchMusic } from "../../services/music";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import { Button, IconButton } from "@material-ui/core";
+import { Button, IconButton, Select, MenuItem } from "@material-ui/core";
 import useForm from "../../hooks/useForm";
 
 const HomePage = () => {
@@ -28,6 +28,7 @@ const HomePage = () => {
     id: "",
     name: "",
   });
+  const [genre, setGenre] = useState("a");
   const [musics, setMusics] = useState([]);
   const [inputText, setInputText] = useState("");
   const [modal, setModal] = useState(false);
@@ -35,12 +36,11 @@ const HomePage = () => {
     name: "",
     artist: "",
     url: "",
-    genre: "",
   });
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    createMusic({...form, playlistId: playlist.id});
+    createMusic({ ...form, genre: genre, playlistId: playlist.id });
   };
 
   useEffect(async () => {
@@ -124,14 +124,25 @@ const HomePage = () => {
                   margin="dense"
                   required
                 />
-                <StyledTextField
-                  name="genre"
-                  onChange={onChange}
-                  placeholder="Gênero"
-                  variant="outlined"
-                  margin="dense"
-                  required
-                />
+                <Select
+                  variant='outlined'
+                  value={genre}
+                  onChange={(e) => {
+                    setGenre(e.target.value);
+                  }}
+                >
+                  <MenuItem disabled value="a">
+                    <em>Gênero</em>
+                  </MenuItem>
+                  <MenuItem value="eletrônica">Eletrônica</MenuItem>
+                  <MenuItem value="forró">Forró</MenuItem>
+                  <MenuItem value="funk">Funk</MenuItem>
+                  <MenuItem value="j-music">J-music</MenuItem>
+                  <MenuItem value="pop">Pop</MenuItem>
+                  <MenuItem value="rock">Rock</MenuItem>
+                  <MenuItem value="sertanejo">Sertanejo</MenuItem>
+                  <MenuItem value="nenhum">Nenhum</MenuItem>
+                </Select>
                 <Button variant="contained" color="primary" type="submit">
                   Criar
                 </Button>

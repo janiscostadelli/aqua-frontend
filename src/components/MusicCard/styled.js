@@ -22,11 +22,13 @@ export const MusicContainer = styled.div`
 `;
 
 export const Title = styled.h5`
+  text-align: left;
   margin: 0px;
   font-size: 18px;
   font-family: "Oswald";
   font-weight: 300;
   color: white;
+  width: 200px;
 `;
 
 export const SubTitle = styled.h6`
@@ -53,6 +55,19 @@ export const StyledFavoriteBorderIcon = styled(FavoriteBorderIcon)`
   font-size: 20px;
 `;
 
+export const TextContainer = styled.div`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  
+`;
+
+export const Notice = styled.p`
+font-size: 12px;
+width: 300px;
+text-align: center;
+color: rgba(0,0,0,0.7);
+`
 /* export const StyledFavoriteIcon = styled(StyledFavoriteIcon)` */
 /* color: #FFFFFF; */
 /* font-size: 20px; */
