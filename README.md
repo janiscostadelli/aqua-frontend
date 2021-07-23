@@ -1,8 +1,6 @@
-#  🎧 Aqua
-[Aqua](http://ec2-3-83-69-28.compute-1.amazonaws.com:3000/)
+#  🎧 [Aqua](http://ec2-3-83-69-28.compute-1.amazonaws.com:3000/)
 
 Projeto Full Stack de um site de musicas.
-
 
 #### 📄 Scripts
 ```
@@ -18,6 +16,9 @@ npm run build
 - Cadastro
 - Criar playlist
 - Procurar música
+
+#### 🌎 Deploy
+Clique [aqui](http://ec2-3-83-69-28.compute-1.amazonaws.com:3000/) para acessar.
 
 #### 📦 API
 
