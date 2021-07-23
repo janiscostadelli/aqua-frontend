@@ -14,6 +14,10 @@ import { IconButton } from "@material-ui/core";
 const MusicCard = (props) => {
   const [modal, setModal] = useState(false);
   const data = new Date(props.music.date);
+  const url = props.music.url.replace(
+    "https://open.spotify.com/track/",
+    "https://open.spotify.com/embed/track/"
+  );
 
   return (
     <>
@@ -46,8 +50,7 @@ const MusicCard = (props) => {
             <b>Musica:</b> {props.music.name}
           </p>
           <p>
-            <b>Artista:</b>
-            {props.music.artist}
+            <b>Artista:</b> {props.music.artist}
           </p>
           <p>
             <b>Genêro:</b> {props.music.genre}
@@ -56,9 +59,14 @@ const MusicCard = (props) => {
             <b>Data de publicação:</b> {data.getDate()}/{data.getMonth() + 1}/
             {data.getFullYear()}
           </p>
-          <audio controls>
-            <source src={props.music.url} type="audio/mpeg" />
-          </audio>
+          <iframe
+            src={url}
+            height="80"
+            volume={20}
+            frameBorder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
           <p>
             <b>Publicado por:</b> {props.music.user_nickname}
           </p>

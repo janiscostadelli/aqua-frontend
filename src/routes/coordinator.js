@@ -10,10 +10,6 @@ export const goToHomePage = (history) => {
   history.push("/")
 }
 
-export const goToCreateMusicPage = (history) => {
-  history.push("/criar-musica")
-}
-
 export const goToLastPage = (history) => {
   history.goBack()
 }

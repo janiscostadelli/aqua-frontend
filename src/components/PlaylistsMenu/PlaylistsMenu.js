@@ -7,7 +7,7 @@ import {
   StyledForm,
   StyledTextField,
   StyledButton,
-  Title
+  Title,
 } from "./styled";
 import PopPop from "react-poppop";
 import useForm from "../../hooks/useForm";
@@ -28,7 +28,7 @@ const PlaylistsMenu = (props) => {
   useEffect(async () => {
     const result = await getAllPlaylists();
     setPlaylists(result);
-    props.setPlaylist({id: result[0].id, name: result[0].name})
+    result.length && props.setPlaylist({ id: result[0].id, name: result[0].name });
   }, []);
 
   return (
@@ -59,13 +59,6 @@ const PlaylistsMenu = (props) => {
       </PopPop>
       <MainContainer>
         <Title>Playlists</Title>
-        {playlists.map((playlist) => {
-          return (
-            <PlaylistTitle onClick={()=>{
-              props.setPlaylist({id: playlist.id, name: playlist.name})
-            }}  key={playlist.id}>{playlist.name}</PlaylistTitle>
-          );
-        })}
         <StyledButton
           color="primary"
           variant="outlined"
@@ -73,6 +66,18 @@ const PlaylistsMenu = (props) => {
         >
           Nova Playlist
         </StyledButton>
+        {playlists.map((playlist) => {
+          return (
+            <PlaylistTitle
+              onClick={() => {
+                props.setPlaylist({ id: playlist.id, name: playlist.name });
+              }}
+              key={playlist.id}
+            >
+              {playlist.name}
+            </PlaylistTitle>
+          );
+        })}
       </MainContainer>
     </>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import CreateMusicPage from "../pages/CreateMusicPage/CreateMusicPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import HomePage from "../pages/HomePage/HomePage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
@@ -20,10 +19,6 @@ const Router = () => {
 
         <Route exact path="/">
           <HomePage />
-        </Route>
-
-        <Route exact path="/criar-musica">
-          <CreateMusicPage />
         </Route>
 
         <Route>

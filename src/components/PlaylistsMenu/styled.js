@@ -5,11 +5,12 @@ import { backgroundColor, neutralColor, primaryColor } from "../../constants/col
 export const MainContainer = styled.div`
   width: 250px;
   background-color: ${neutralColor};
-  flex-direction: column;
-  display: flex;
+  overflow-y: scroll;
+  height: 92vh;
+  text-align: center;
 `;
 
-export const PlaylistTitle = styled.p`
+export const PlaylistTitle = styled.div`
   margin: 0px;
   height: 50px;
   display: flex;

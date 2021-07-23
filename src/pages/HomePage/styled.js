@@ -22,7 +22,7 @@ export const Title = styled.h2`
   padding-left: 25px;
 `;
 
-export const StyledTextField = styled(TextField)`
+export const SearchTextField = styled(TextField)`
   border-radius: 5px;
   width: 550px;
 `;
@@ -63,4 +63,16 @@ export const StyledAddIcon = styled(AddCircleIcon)`
   :hover {
     color: #485390;
   }
+`;
+
+export const StyledForm = styled.form`
+display: flex;
+flex-direction: column;
+gap: 10px;
+justify-content: center;
+`;
+
+export const StyledTextField = styled(TextField)`
+  border-radius: 5px;
+  width: 250px;
 `;
